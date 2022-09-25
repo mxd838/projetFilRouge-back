@@ -4,7 +4,6 @@ export type ProductDocument = Product & Document;
 
 @Schema()
 export class Product {
-
   @Prop()
   name: string;
 
@@ -45,8 +44,8 @@ export class Product {
       buyersNeeded: number;
       price: number;
       current: boolean;
-    }
-  ]
+    },
+  ];
 
   @Prop()
   details: string;
@@ -58,11 +57,7 @@ export class Product {
   origin: string;
 
   @Prop()
-  images: [
-    image: string,
-    image: string,
-    image: string
-  ]
+  images: [image: string, image: string, image: string];
 
   @Prop()
   produced: boolean;
@@ -75,7 +70,6 @@ export class Product {
 
   @Prop()
   responsible: boolean;
-
 }
 
-export const ProductDocument = SchemaFactory.createForClass(Product);
+export const ProductSchema = SchemaFactory.createForClass(Product);
